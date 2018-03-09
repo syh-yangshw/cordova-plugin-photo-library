@@ -363,6 +363,10 @@ public class PhotoLibraryService {
       } catch (IOException e) {
         // Do nothing
       }
+		
+
+	  //content://
+	  queryResult.put("contentUrl",MediaStore.Images.Media.EXTERNAL_CONTENT_URI+"/"+queryResult.get("id"));
 
       // photoId is in format "imageid;imageurl"
       queryResult.put("id",
